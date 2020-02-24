@@ -2,7 +2,7 @@ package io.netty.bootstrap;
 
 import java.util.Map;
 
-import io.jpower.kcp.netty.UkcpServerChannel;
+import com.mmo4j.kcp.netty.UkcpServerChannel;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelOption;
 import io.netty.util.AttributeKey;
