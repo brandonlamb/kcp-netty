@@ -12,11 +12,11 @@ import org.junit.Test;
 /**
  * @author <a href="mailto:szhnet@gmail.com">szh</a>
  */
-public class ReItrHashMapTest {
+public class ReusableHashMapTest {
 
     @Test
     public void entrySetIterator() throws Exception {
-        ReItrHashMap<String, Integer> m = new ReItrHashMap<>();
+        ReusableHashMap<String, Integer> m = new ReusableHashMap<>();
         m.put("abc", 1);
         m.put("123", 2);
         m.put("hehe", 3);

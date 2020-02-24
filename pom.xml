@@ -3,16 +3,13 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>io.jpower.kcp</groupId>
   <artifactId>kcp-parent</artifactId>
   <version>1.4.8</version>
   <packaging>pom</packaging>
-
   <name>kcp-netty [Parent]</name>
   <description>Java implementation of KCP based on Netty</description>
   <url>http://kcp.jpower.io/</url>
-
   <properties>
     <jdk.version>1.8</jdk.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -34,18 +31,16 @@
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
     <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-<!--    <netty.version>4.1.45.Final</netty.version>-->
-    <netty.version>4.1.41.Final</netty.version>
+        <netty.version>4.1.45.Final</netty.version>
+<!--    <netty.version>4.1.41.Final</netty.version>-->
     <slf4j.version>1.7.30</slf4j.version>
   </properties>
-
   <licenses>
     <license>
       <name>The MIT License</name>
       <url>https://opensource.org/licenses/MIT</url>
     </license>
   </licenses>
-
   <developers>
     <developer>
       <id>szhnet</id>
@@ -53,12 +48,10 @@
       <email>szhnet@gmail.com</email>
     </developer>
   </developers>
-
   <scm>
     <url>https://github.com/szhnet/kcp-netty</url>
     <connection>scm:git:git://github.com/szhnet/kcp-netty.git</connection>
   </scm>
-
   <distributionManagement>
     <snapshotRepository>
       <id>sonatype-nexus-staging</id>
@@ -69,12 +62,6 @@
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
-
-  <modules>
-    <module>kcp-netty</module>
-    <module>kcp-example</module>
-  </modules>
-
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -97,8 +84,6 @@
         <artifactId>slf4j-simple</artifactId>
         <version>${slf4j.version}</version>
       </dependency>
-
-      <!-- test -->
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
@@ -111,7 +96,6 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
   <build>
     <pluginManagement>
       <plugins>
@@ -137,7 +121,6 @@
         </plugin>
       </plugins>
     </pluginManagement>
-
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -150,4 +133,8 @@
       </plugin>
     </plugins>
   </build>
+  <modules>
+    <module>kcp-netty</module>
+    <module>kcp-example</module>
+  </modules>
 </project>

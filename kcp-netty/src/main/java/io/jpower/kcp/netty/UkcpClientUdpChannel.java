@@ -180,7 +180,7 @@ final class UkcpClientUdpChannel extends AbstractNioMessageChannel {
   }
 
   @Override
-  protected int doReadMessages(List<Object> buf) throws Exception {
+  protected int doReadMessages(List<Object> buf) {
     DatagramChannel ch = javaChannel();
     ChannelConfig config = config();
     RecvByteBufAllocator.Handle allocHandle = unsafe().recvBufAllocHandle();
@@ -262,6 +262,7 @@ final class UkcpClientUdpChannel extends AbstractNioMessageChannel {
 
       boolean closed = false;
       Throwable exception = null;
+
       try {
         try {
           do {
@@ -368,13 +369,11 @@ final class UkcpClientUdpChannel extends AbstractNioMessageChannel {
     }
 
     private void clearAndReleaseReadBuf() {
-      int size = readBuf.size();
+//      int size = readBuf.size();
       for (Object msg : readBuf) {
         ReferenceCountUtil.release(msg);
       }
       readBuf.clear();
     }
-
   }
-
 }

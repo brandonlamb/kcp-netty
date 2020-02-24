@@ -9,20 +9,19 @@ import java.util.ListIterator;
  */
 public interface ReusableListIterator<E> extends ListIterator<E>, ReusableIterator<E> {
 
-    /**
-     * This method is identical to {@code rewind(0)}.
-     *
-     * @return this iterator
-     */
-    ReusableListIterator<E> rewind();
+  /**
+   * This method is identical to {@code rewind(0)}.
+   *
+   * @return this iterator
+   */
+  ReusableListIterator<E> rewind();
 
-
-    /**
-     * Reset the iterator and specify index of the first element to be returned from the iterator.
-     *
-     * @param index index of the first element to be returned from the iterator
-     * @return this iterator
-     */
-    ReusableListIterator<E> rewind(int index);
+  /**
+   * Reset the iterator and specify index of the first element to be returned from the iterator.
+   *
+   * @param index index of the first element to be returned from the iterator
+   * @return this iterator
+   */
+  ReusableListIterator<E> rewind(int index);
 
 }

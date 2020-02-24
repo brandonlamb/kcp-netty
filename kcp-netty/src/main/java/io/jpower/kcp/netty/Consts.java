@@ -9,12 +9,12 @@ import io.netty.util.internal.logging.InternalLoggerFactory;
  */
 public class Consts {
 
-    public static final InternalLogger sheduleUpdateLog = InternalLoggerFactory.getInstance("io.jpower.kcp.netty" +
-            ".sheduleUpdate");
-
-    public static final int FIXED_RECV_BYTEBUF_ALLOCATE_SIZE = SystemPropertyUtil.getInt("io.jpower.kcp" +
-            ".udpRecvAllocateSize", 2048);
-
-    public static final int CLOSE_WAIT_TIME = 5 * 1000;
+  public static final InternalLogger
+    scheduleUpdateLog =
+    InternalLoggerFactory.getInstance("io.jpower.kcp.netty.scheduleUpdate");
+  public static final int
+    FIXED_RECV_BYTEBUF_ALLOCATE_SIZE =
+    SystemPropertyUtil.getInt("io.jpower.kcp.udpRecvAllocateSize", 2048);
+  public static final int CLOSE_WAIT_TIME = 5 * 1000;
 
 }

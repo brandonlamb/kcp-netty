@@ -9,17 +9,17 @@ import io.netty.channel.Channel;
  */
 public interface UkcpChannel extends Channel {
 
-    int conv();
+  int conv();
 
-    @Override
-    UkcpChannelConfig config();
+  @Override
+  UkcpChannelConfig config();
 
-    UkcpChannel conv(int conv);
+  UkcpChannel conv(int conv);
 
-    @Override
-    InetSocketAddress localAddress();
+  @Override
+  InetSocketAddress localAddress();
 
-    @Override
-    InetSocketAddress remoteAddress();
+  @Override
+  InetSocketAddress remoteAddress();
 
 }

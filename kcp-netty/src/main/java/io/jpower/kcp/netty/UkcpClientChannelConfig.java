@@ -13,92 +13,88 @@ import io.netty.channel.WriteBufferWaterMark;
  */
 public interface UkcpClientChannelConfig extends ChannelConfig, UkcpChannelConfig {
 
-    UkcpClientChannelConfig setNodelay(boolean nodelay);
+  UkcpClientChannelConfig setNodelay(boolean nodelay);
 
-    UkcpClientChannelConfig setInterval(int interval);
+  UkcpClientChannelConfig setInterval(int interval);
 
-    UkcpClientChannelConfig setFastResend(int resend);
+  UkcpClientChannelConfig setFastResend(int resend);
 
-    UkcpClientChannelConfig setNocwnd(boolean nc);
+  UkcpClientChannelConfig setNocwnd(boolean nc);
 
-    UkcpClientChannelConfig setMinRto(int minRto);
+  UkcpClientChannelConfig setMinRto(int minRto);
 
-    UkcpClientChannelConfig setMtu(int mtu);
+  UkcpClientChannelConfig setMtu(int mtu);
 
-    UkcpClientChannelConfig setRcvWnd(int rcvWnd);
+  UkcpClientChannelConfig setRcvWnd(int rcvWnd);
 
-    UkcpClientChannelConfig setSndWnd(int sndWnd);
+  UkcpClientChannelConfig setSndWnd(int sndWnd);
 
-    UkcpClientChannelConfig setStream(boolean stream);
+  UkcpClientChannelConfig setStream(boolean stream);
 
-    UkcpClientChannelConfig setDeadLink(int deadLink);
+  UkcpClientChannelConfig setDeadLink(int deadLink);
 
-    /**
-     * Gets the {@link StandardSocketOptions#SO_RCVBUF} option.
-     */
-    int getUdpReceiveBufferSize();
+  /**
+   * Gets the {@link StandardSocketOptions#SO_RCVBUF} option.
+   */
+  int getUdpReceiveBufferSize();
 
-    /**
-     * Sets the {@link StandardSocketOptions#SO_RCVBUF} option.
-     */
-    UkcpClientChannelConfig setUdpReceiveBufferSize(int receiveBufferSize);
+  /**
+   * Sets the {@link StandardSocketOptions#SO_RCVBUF} option.
+   */
+  UkcpClientChannelConfig setUdpReceiveBufferSize(int receiveBufferSize);
 
-    /**
-     * Gets the {@link StandardSocketOptions#SO_SNDBUF} option.
-     */
-    int getUdpSendBufferSize();
+  /**
+   * Gets the {@link StandardSocketOptions#SO_SNDBUF} option.
+   */
+  int getUdpSendBufferSize();
 
-    /**
-     * Sets the {@link StandardSocketOptions#SO_SNDBUF} option.
-     */
-    UkcpClientChannelConfig setUdpSendBufferSize(int sendBufferSize);
+  /**
+   * Sets the {@link StandardSocketOptions#SO_SNDBUF} option.
+   */
+  UkcpClientChannelConfig setUdpSendBufferSize(int sendBufferSize);
 
-    /**
-     * Gets the {@link StandardSocketOptions#IP_TOS} option.
-     */
-    int getUdpTrafficClass();
+  /**
+   * Gets the {@link StandardSocketOptions#IP_TOS} option.
+   */
+  int getUdpTrafficClass();
 
-    /**
-     * Sets the {@link StandardSocketOptions#IP_TOS} option.
-     */
-    UkcpClientChannelConfig setUdpTrafficClass(int trafficClass);
+  /**
+   * Sets the {@link StandardSocketOptions#IP_TOS} option.
+   */
+  UkcpClientChannelConfig setUdpTrafficClass(int trafficClass);
 
-    /**
-     * Gets the {@link StandardSocketOptions#SO_REUSEADDR} option.
-     */
-    boolean isReuseAddress();
+  /**
+   * Gets the {@link StandardSocketOptions#SO_REUSEADDR} option.
+   */
+  boolean isReuseAddress();
 
-    /**
-     * Gets the {@link StandardSocketOptions#SO_REUSEADDR} option.
-     */
-    UkcpClientChannelConfig setReuseAddress(boolean reuseAddress);
+  /**
+   * Gets the {@link StandardSocketOptions#SO_REUSEADDR} option.
+   */
+  UkcpClientChannelConfig setReuseAddress(boolean reuseAddress);
 
-    @Override
-    @Deprecated
-    UkcpClientChannelConfig setMaxMessagesPerRead(int maxMessagesPerRead);
+  @Override
+  UkcpClientChannelConfig setWriteSpinCount(int writeSpinCount);
 
-    @Override
-    UkcpClientChannelConfig setWriteSpinCount(int writeSpinCount);
+  @Override
+  UkcpClientChannelConfig setConnectTimeoutMillis(int connectTimeoutMillis);
 
-    @Override
-    UkcpClientChannelConfig setConnectTimeoutMillis(int connectTimeoutMillis);
+  @Override
+  UkcpClientChannelConfig setAllocator(ByteBufAllocator allocator);
 
-    @Override
-    UkcpClientChannelConfig setAllocator(ByteBufAllocator allocator);
+  @Override
+  UkcpClientChannelConfig setRecvByteBufAllocator(RecvByteBufAllocator allocator);
 
-    @Override
-    UkcpClientChannelConfig setRecvByteBufAllocator(RecvByteBufAllocator allocator);
+  @Override
+  UkcpClientChannelConfig setAutoRead(boolean autoRead);
 
-    @Override
-    UkcpClientChannelConfig setAutoRead(boolean autoRead);
+  @Override
+  UkcpClientChannelConfig setAutoClose(boolean autoClose);
 
-    @Override
-    UkcpClientChannelConfig setAutoClose(boolean autoClose);
+  @Override
+  UkcpClientChannelConfig setMessageSizeEstimator(MessageSizeEstimator estimator);
 
-    @Override
-    UkcpClientChannelConfig setMessageSizeEstimator(MessageSizeEstimator estimator);
-
-    @Override
-    UkcpClientChannelConfig setWriteBufferWaterMark(WriteBufferWaterMark writeBufferWaterMark);
+  @Override
+  UkcpClientChannelConfig setWriteBufferWaterMark(WriteBufferWaterMark writeBufferWaterMark);
 
 }

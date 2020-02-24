@@ -7,60 +7,60 @@ import io.netty.channel.ChannelConfig;
  */
 public interface UkcpChannelConfig extends ChannelConfig {
 
-    boolean isNodelay();
+  boolean isNodelay();
 
-    UkcpChannelConfig setNodelay(boolean nodelay);
+  UkcpChannelConfig setNodelay(boolean nodelay);
 
-    int getInterval();
+  int getInterval();
 
-    UkcpChannelConfig setInterval(int interval);
+  UkcpChannelConfig setInterval(int interval);
 
-    int getFastResend();
+  int getFastResend();
 
-    UkcpChannelConfig setFastResend(int fastResend);
+  UkcpChannelConfig setFastResend(int fastResend);
 
-    int getFastLimit();
+  int getFastLimit();
 
-    UkcpChannelConfig setFastLimit(int fastLimit);
+  UkcpChannelConfig setFastLimit(int fastLimit);
 
-    boolean isNocwnd();
+  boolean isNocwnd();
 
-    UkcpChannelConfig setNocwnd(boolean nc);
+  UkcpChannelConfig setNocwnd(boolean nc);
 
-    int getMinRto();
+  int getMinRto();
 
-    UkcpChannelConfig setMinRto(int minRto);
+  UkcpChannelConfig setMinRto(int minRto);
 
-    int getMtu();
+  int getMtu();
 
-    UkcpChannelConfig setMtu(int mtu);
+  UkcpChannelConfig setMtu(int mtu);
 
-    int getRcvWnd();
+  int getRcvWnd();
 
-    UkcpChannelConfig setRcvWnd(int rcvWnd);
+  UkcpChannelConfig setRcvWnd(int rcvWnd);
 
-    int getSndWnd();
+  int getSndWnd();
 
-    UkcpChannelConfig setSndWnd(int sndWnd);
+  UkcpChannelConfig setSndWnd(int sndWnd);
 
-    boolean isStream();
+  boolean isStream();
 
-    UkcpChannelConfig setStream(boolean stream);
+  UkcpChannelConfig setStream(boolean stream);
 
-    int getDeadLink();
+  int getDeadLink();
 
-    UkcpChannelConfig setDeadLink(int deadLink);
+  UkcpChannelConfig setDeadLink(int deadLink);
 
-    boolean isAutoSetConv();
+  boolean isAutoSetConv();
 
-    UkcpChannelConfig setAutoSetConv(boolean autoSetConv);
+  UkcpChannelConfig setAutoSetConv(boolean autoSetConv);
 
-    boolean isFastFlush();
+  boolean isFastFlush();
 
-    UkcpChannelConfig setFastFlush(boolean fastFlush);
+  UkcpChannelConfig setFastFlush(boolean fastFlush);
 
-    boolean isMergeSegmentBuf();
+  boolean isMergeSegmentBuf();
 
-    UkcpChannelConfig setMergeSegmentBuf(boolean mergeSegmentBuf);
+  UkcpChannelConfig setMergeSegmentBuf(boolean mergeSegmentBuf);
 
 }

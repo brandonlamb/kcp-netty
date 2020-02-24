@@ -35,8 +35,7 @@ public final class EchoServer {
                             p.addLast(new EchoServerHandler());
                         }
                     });
-            ChannelOptionHelper.nodelay(b, true, 20, 2, true)
-                    .childOption(UkcpChannelOption.UKCP_MTU, 512);
+            ChannelOptionHelper.nodelay(b, true, 20, 2, true).childOption(UkcpChannelOption.UKCP_MTU, 512);
 
             // Start the server.
             ChannelFuture f = b.bind(PORT).sync();

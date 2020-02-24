@@ -1,10 +1,10 @@
-dist: trusty
+dist: bionic
 
 language: java
 
 jdk:
-- openjdk7
+- openjdk8
 
 notifications:
   email:
-  - szhnet@gmail.com
+  - brandonlamb@gmail.com

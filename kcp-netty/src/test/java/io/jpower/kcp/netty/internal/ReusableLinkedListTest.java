@@ -13,11 +13,11 @@ import org.junit.Test;
 /**
  * @author <a href="mailto:szhnet@gmail.com">szh</a>
  */
-public class ReItrLinkedListTest {
+public class ReusableLinkedListTest {
 
     @Test
     public void iterator() throws Exception {
-        ReItrLinkedList<String> l = new ReItrLinkedList<>();
+        ReusableLinkedList<String> l = new ReusableLinkedList<>();
         String[] strs = {"abc", "123", "hehe"};
         Collections.addAll(l, strs);
 
@@ -43,7 +43,7 @@ public class ReItrLinkedListTest {
 
     @Test
     public void listIterator() throws Exception {
-        ReItrLinkedList<String> l = new ReItrLinkedList<>();
+        ReusableLinkedList<String> l = new ReusableLinkedList<>();
         String[] strs = {"abc", "123", "hehe"};
         Collections.addAll(l, strs);
 
@@ -69,7 +69,7 @@ public class ReItrLinkedListTest {
 
     @Test
     public void listIteratorInt() throws Exception {
-        ReItrLinkedList<String> l = new ReItrLinkedList<>();
+        ReusableLinkedList<String> l = new ReusableLinkedList<>();
         String[] strs = {"abc", "123", "hehe"};
         Collections.addAll(l, strs);
 

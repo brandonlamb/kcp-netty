@@ -49,6 +49,16 @@ public class UkcpServerBootstrap extends AbstractBootstrap<UkcpServerBootstrap, 
     childAttrs.putAll(bootstrap.childAttrs);
   }
 
+  @SuppressWarnings("unchecked")
+  static Map.Entry<AttributeKey<?>, Object>[] newAttrArray(int size) {
+    return new Map.Entry[size];
+  }
+
+  @SuppressWarnings("unchecked")
+  static Map.Entry<ChannelOption<?>, Object>[] newOptionArray(int size) {
+    return new Map.Entry[size];
+  }
+
   /**
    * Allow to specify a {@link ChannelOption} which is used for the {@link Channel} instances once they get created
    * (after the acceptor accepted the {@link Channel}). Use a value of {@code null} to remove a previous set
@@ -101,8 +111,7 @@ public class UkcpServerBootstrap extends AbstractBootstrap<UkcpServerBootstrap, 
     ChannelPipeline p = channel.pipeline();
 
     final ChannelHandler currentChildHandler = childHandler;
-    final Entry<ChannelOption<?>, Object>[] currentChildOptions =
-      childOptions.entrySet().toArray(newOptionArray(0));
+    final Entry<ChannelOption<?>, Object>[] currentChildOptions = childOptions.entrySet().toArray(newOptionArray(0));
     final Entry<AttributeKey<?>, Object>[] currentChildAttrs = childAttrs.entrySet().toArray(newAttrArray(0));
 
     p.addLast(new ChannelInitializer<Channel>() {
@@ -157,6 +166,7 @@ public class UkcpServerBootstrap extends AbstractBootstrap<UkcpServerBootstrap, 
   }
 
   private static class ServerUkcpBootstrapAcceptor extends ChannelInboundHandlerAdapter {
+
     private final ChannelHandler childHandler;
     private final Map.Entry<ChannelOption<?>, Object>[] childOptions;
     private final Map.Entry<AttributeKey<?>, Object>[] childAttrs;
@@ -202,5 +212,4 @@ public class UkcpServerBootstrap extends AbstractBootstrap<UkcpServerBootstrap, 
       ctx.fireExceptionCaught(cause);
     }
   }
-
 }
