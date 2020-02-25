@@ -1,5 +1,9 @@
 package com.mmo4j.kcp.netty;
 
+import com.mmo4j.kcp.netty.internal.CodecOutputList;
+import com.mmo4j.kcp.netty.internal.ReusableHashMap;
+import com.mmo4j.kcp.netty.internal.ReusableIterator;
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
@@ -14,9 +18,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import com.mmo4j.kcp.netty.internal.CodecOutputList;
-import com.mmo4j.kcp.netty.internal.ReusableHashMap;
-import com.mmo4j.kcp.netty.internal.ReusableIterator;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
 import io.netty.channel.ChannelConfig;
@@ -516,7 +517,7 @@ public final class UkcpServerChannel extends AbstractNioMessageChannel implement
 
   private final class UkcpServerUnsafe extends AbstractNioUnsafe {
 
-    private final List<Object> readBuf = new ArrayList<Object>();
+    private final List<Object> readBuf = new ArrayList<>();
 
     @Override
     public void read() {
