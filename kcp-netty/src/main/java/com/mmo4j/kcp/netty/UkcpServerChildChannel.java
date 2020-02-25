@@ -20,7 +20,7 @@ import io.netty.util.internal.logging.InternalLoggerFactory;
 /**
  * @author <a href="mailto:szhnet@gmail.com">szh</a>
  */
-public final class UkcpServerChildChannel extends AbstractChannel implements UkcpChannel {
+public final class UkcpServerChildChannel extends AbstractChannel implements UkcpChannel, UnorderedUnreliableMessage {
 
   private static final InternalLogger log = InternalLoggerFactory.getInstance(UkcpServerChildChannel.class);
 
